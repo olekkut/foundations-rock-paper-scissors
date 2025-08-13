@@ -37,14 +37,12 @@ function checkRandomness(){
 checkRandomness();
 
 function getHumanChoice() {
-    humanChoice = prompt("Please enter your choice: rock, paper, or scissors.");
+    let humanChoice = prompt("Please enter your choice: rock, paper, or scissors.");
     return humanChoice.toLowerCase();
 }
 
 let humanScore = 0;
 let computerScore = 0;
-let humanChoice = getHumanChoice();
-let computerChoice = getComputerChoice();
 
 function playRound(humanChoice, computerChoice) {
     if (humanChoice === computerChoice) {
@@ -71,3 +69,8 @@ function playRound(humanChoice, computerChoice) {
         console.log("Invalid input. Please choose rock, paper, or scissors.");
     }
 }
+
+const humanSelection = getHumanChoice();
+const computerSelection = getComputerChoice();
+
+playRound(humanSelection, computerSelection);
