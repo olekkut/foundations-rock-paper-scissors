@@ -70,7 +70,15 @@ function playRound(humanChoice, computerChoice) {
     }
 }
 
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
+function playGame() {
+    for (let i = 1; i < 6; i++) {
+        const humanSelection = getHumanChoice();
+        const computerSelection = getComputerChoice();
+        console.log("Round ", i)
+        playRound(humanSelection, computerSelection);
+        console.log("Your score", humanScore, " ", "Computer score", computerScore);
+    }
 
-playRound(humanSelection, computerSelection);
+}
+
+playGame()
