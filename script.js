@@ -9,12 +9,12 @@ function getComputerChoice() {
     }
 }
 
-function checkRandomness(iterations = 100){
+function checkRandomness(iterations = 100) {
     let rock = 0;
     let paper = 0;
     let scissors = 0;
-
     let invalid = 0;
+
     for (let i = 0; i < iterations; i++) {
         let randomChoice = getComputerChoice();
         if (randomChoice === "rock") {
@@ -27,7 +27,9 @@ function checkRandomness(iterations = 100){
             invalid++;
         }
     }
-    console.log(rock, paper, scissors);
+
+    console.log(`rock: ${rock}, paper: ${paper}, scissors: ${scissors}`);
+
     if (invalid === 0) {
         console.log("The random function is working correctly.");
     } else {
@@ -35,7 +37,7 @@ function checkRandomness(iterations = 100){
     }
 }
 
-checkRandomness(); 
+checkRandomness();
 
 function getHumanChoice() {
     let humanChoice = prompt("Please enter your choice: rock, paper, or scissors.");
