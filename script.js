@@ -77,7 +77,7 @@ function playGame() {
     for (let i = 1; i < 6; i++) {
         const humanSelection = getHumanChoice();
         const computerSelection = getComputerChoice();
-        console.log("Round ", i)
+        console.log("Round ", i);
         playRound(humanSelection, computerSelection);
         console.log("Your score", humanScore, " ", "Computer score", computerScore);
     }
