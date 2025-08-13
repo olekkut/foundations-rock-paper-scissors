@@ -9,21 +9,20 @@ function getComputerChoice() {
     }
 }
 
-
 function checkRandomness(){
     let rock = 0;
     let paper = 0;
     let scissors = 0;
 
     for (let i = 0; i < 100; i++) {
-        let RandomChoice = getComputerChoice();
-        if (RandomChoice === "rock") {
+        let randomChoice = getComputerChoice();
+        if (randomChoice === "rock") {
             rock++;
         }
-        if (RandomChoice === "paper") {
+        if (randomChoice === "paper") {
             paper++;
         }
-        if (RandomChoice === "scissors") {
+        if (randomChoice === "scissors") {
             scissors++;
         }  
     }
@@ -36,3 +35,16 @@ function checkRandomness(){
 }
 
 checkRandomness();
+
+function getHumanChoice() {
+    return prompt("Please enter your choice: rock, paper, or scissors.");;
+}
+
+let humanScore = 0;
+let computerScore = 0;
+
+function playRound(humanChoice, computerChoice) {
+    humanChoice = getHumanChoice();
+    computerChoice = getComputerChoice();
+    
+}
