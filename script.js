@@ -46,5 +46,4 @@ let computerScore = 0;
 function playRound(humanChoice, computerChoice) {
     humanChoice = getHumanChoice();
     computerChoice = getComputerChoice();
-    
 }
